@@ -237,12 +237,14 @@
         },
         "controlled": {
           "applicability": "apply",
-          "status": "na",
-          "name": "",
-          "id": "",
-          "start": "",
+          "status": "valid",
+          "name": "管制藥品登記證",
+          "id": "管證字第ERR11300000101號",
+          "start": "113",
           "end": "",
-          "note": "資料待補"
+          "manager": "陳敬宜",
+          "address": "新竹市香山區海山里大湖路51巷1號",
+          "note": "有效（原核發103、本件113）"
         }
       },
       "footnotes": []
@@ -288,24 +290,22 @@
           "note": "資料待補"
         },
         "radiation": {
-          "applicability": "apply",
-          "status": "na",
+          "applicability": "notApplicable",
+          "status": "notApplicable",
           "name": "",
           "id": "",
           "start": "",
           "end": "",
-          "note": "資料待補"
+          "note": ""
         },
         "controlled": {
-          "applicability": "apply",
-          "status": "valid",
-          "name": "管制藥品登記證",
-          "id": "管證字第ERR11300000101號",
-          "start": "113",
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
           "end": "",
-          "manager": "陳敬宜",
-          "address": "新竹市香山區海山里大湖路51巷1號",
-          "note": "有效（原核發103、本件113）"
+          "note": ""
         }
       },
       "footnotes": []
@@ -335,13 +335,13 @@
           "note": ""
         },
         "toxic": {
-          "applicability": "apply",
-          "status": "na",
+          "applicability": "notApplicable",
+          "status": "notApplicable",
           "name": "",
           "id": "",
           "start": "",
           "end": "",
-          "note": "資料待補（NA）"
+          "note": ""
         },
         "fire": {
           "applicability": "notApplicable",
@@ -399,13 +399,13 @@
           "note": "資料待補"
         },
         "toxic": {
-          "applicability": "apply",
-          "status": "na",
+          "applicability": "notApplicable",
+          "status": "notApplicable",
           "name": "",
           "id": "",
           "start": "",
           "end": "",
-          "note": "資料待補"
+          "note": ""
         },
         "fire": {
           "applicability": "notApplicable",
