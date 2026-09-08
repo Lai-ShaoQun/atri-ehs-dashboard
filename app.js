@@ -469,7 +469,7 @@
       const list = await res.json();
       if (!Array.isArray(list)) return;
       for (const row of list) {
-        if (!row || !row.id || pendingLive.has(row.id) === false) continue;
+        if (!row || !row.id || !pendingLive.has(row.id)) continue;
         if (!row.answer) continue;
         const meta = pendingLive.get(row.id);
         pendingLive.delete(row.id);
