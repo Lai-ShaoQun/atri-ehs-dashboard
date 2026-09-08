@@ -399,142 +399,9 @@
     }
   }
 
-  const LIVE_CFG_KEY = "ehs-dashboard-live-cfg-v1";
-  const OUTBOX_URL = "data/chat-outbox.json";
-  const pendingLive = new Map(); // id -> { question, timer }
-  let pollTimer = null;
-
-  function loadLiveCfg() {
-    try {
-      const raw = localStorage.getItem(LIVE_CFG_KEY);
-      if (!raw) return { enabled: false, url: "", key: "" };
-      const o = JSON.parse(raw);
-      return {
-        enabled: !!o.enabled,
-        url: String(o.url || ""),
-        key: String(o.key || ""),
-      };
-    } catch {
-      return { enabled: false, url: "", key: "" };
-    }
-  }
-
-  function saveLiveCfg(cfg) {
-    localStorage.setItem(LIVE_CFG_KEY, JSON.stringify(cfg));
-  }
-
-  function updateModeHint() {
-    const hint = $("#chat-mode-hint");
-    if (!hint) return;
-    const cfg = loadLiveCfg();
-    if (cfg.enabled && cfg.url && cfg.key) {
-      hint.textContent = "即時模式：問題會同步到 Grok Bot，回覆寫回後約數秒顯示。";
-    } else if (cfg.enabled) {
-      hint.textContent = "已開即時同步，但尚未設定 Webhook（按「設定」貼上網址與金鑰）。";
-    } else {
-      hint.textContent = "預設依看板資料回覆；開啟即時同步後會送到 Grok Bot。";
-    }
-  }
-
-  function newQuestionId() {
-    if (crypto.randomUUID) return crypto.randomUUID();
-    return `q-${Date.now()}-${Math.random().toString(16).slice(2)}`;
-  }
-
-  async function postWebhook(payload) {
-    const cfg = loadLiveCfg();
-    if (!cfg.url || !cfg.key) throw new Error("尚未設定 Webhook");
-    const headers = {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${cfg.key}`,
-      "X-Webhook-Key": cfg.key,
-    };
-    const res = await fetch(cfg.url, {
-      method: "POST",
-      headers,
-      body: JSON.stringify(payload),
-      mode: "cors",
-    });
-    if (!res.ok) {
-      const t = await res.text().catch(() => "");
-      throw new Error(`Webhook HTTP ${res.status}${t ? `: ${t.slice(0, 120)}` : ""}`);
-    }
-  }
-
-  async function pollOutboxOnce() {
-    if (!pendingLive.size) return;
-    try {
-      const res = await fetch(`${OUTBOX_URL}?t=${Date.now()}`, { cache: "no-store" });
-      if (!res.ok) return;
-      const list = await res.json();
-      if (!Array.isArray(list)) return;
-      for (const row of list) {
-        if (!row || !row.id || !pendingLive.has(row.id)) continue;
-        if (!row.answer) continue;
-        const meta = pendingLive.get(row.id);
-        pendingLive.delete(row.id);
-        if (meta && meta.el) meta.el.remove();
-        appendMsg("bot", row.answer);
-        const transcript = loadTranscript();
-        transcript.push({ role: "user", text: row.question || meta?.question || "" }, { role: "bot", text: row.answer });
-        saveTranscript(transcript);
-      }
-      if (!pendingLive.size && pollTimer) {
-        clearInterval(pollTimer);
-        pollTimer = null;
-      }
-    } catch {
-      /* ignore transient */
-    }
-  }
-
-  function ensurePoll() {
-    if (pollTimer) return;
-    pollTimer = setInterval(pollOutboxOnce, 2500);
-    pollOutboxOnce();
-  }
-
-  async function askLive(question) {
-    const id = newQuestionId();
-    appendMsg("user", question);
-    const pending = document.createElement("div");
-    pending.className = "msg msg-bot msg-pending";
-    pending.textContent = "已送出，等待「測試、構思執行者」回覆…";
-    $("#chat-messages").appendChild(pending);
-    $("#chat-messages").scrollTop = $("#chat-messages").scrollHeight;
-    pendingLive.set(id, { question, el: pending });
-    ensurePoll();
-    try {
-      await postWebhook({
-        id,
-        question,
-        text: question,
-        message: question,
-        ts: new Date().toISOString(),
-        source: "atri-ehs-dashboard",
-      });
-    } catch (err) {
-      pendingLive.delete(id);
-      pending.remove();
-      const local = answerQuestion(question);
-      appendMsg(
-        "bot",
-        `即時同步失敗（${err.message || err}）。改以看板資料回覆：\n${local}`
-      );
-      const transcript = loadTranscript();
-      transcript.push({ role: "user", text: question }, { role: "bot", text: local });
-      saveTranscript(transcript);
-    }
-  }
-
   function ask(q) {
     const question = String(q || "").trim();
     if (!question) return;
-    const cfg = loadLiveCfg();
-    if (cfg.enabled && cfg.url && cfg.key) {
-      askLive(question);
-      return;
-    }
     appendMsg("user", question);
     const reply = answerQuestion(question);
     appendMsg("bot", reply);
@@ -547,43 +414,6 @@
     const chat = data.chat || {};
     $("#chat-title").textContent = chat.title || "提問「測試、構思執行者」";
     $("#chat-input").placeholder = chat.placeholder || "輸入問題…";
-
-    const cfg = loadLiveCfg();
-    const enabled = $("#chat-live-enabled");
-    const settings = $("#chat-settings");
-    const urlInput = $("#chat-webhook-url");
-    const keyInput = $("#chat-webhook-key");
-    if (enabled) enabled.checked = !!cfg.enabled;
-    if (urlInput) urlInput.value = cfg.url || "";
-    if (keyInput) keyInput.value = cfg.key || "";
-    updateModeHint();
-
-    enabled?.addEventListener("change", () => {
-      const next = loadLiveCfg();
-      next.enabled = enabled.checked;
-      saveLiveCfg(next);
-      updateModeHint();
-      if (next.enabled && !(next.url && next.key) && settings) {
-        settings.hidden = false;
-      }
-    });
-
-    $("#chat-settings-btn")?.addEventListener("click", () => {
-      if (!settings) return;
-      settings.hidden = !settings.hidden;
-    });
-
-    $("#chat-settings-save")?.addEventListener("click", () => {
-      const next = {
-        enabled: !!(enabled && enabled.checked),
-        url: (urlInput?.value || "").trim(),
-        key: (keyInput?.value || "").trim(),
-      };
-      saveLiveCfg(next);
-      const st = $("#chat-settings-status");
-      if (st) st.textContent = next.url && next.key ? "已儲存連線設定（僅本機）。" : "請同時填寫 URL 與 key。";
-      updateModeHint();
-    });
 
     const chips = $("#chat-chips");
     chips.innerHTML = (chat.suggestedChips || [])
@@ -610,7 +440,7 @@
     } else {
       appendMsg(
         "bot",
-        "您好，我是「測試、構思執行者」看板助手。可先點建議問題；若要即時同步到 Grok Bot，請開啟上方開關並完成 Webhook 設定。"
+        "您好，我是看板內建助手（測試、構思執行者）。請點建議問題，或自行輸入；僅依本頁 JSON 回覆。"
       );
     }
 
