@@ -85,6 +85,23 @@
       <span class="chat-toggle-icon" aria-hidden="true">▾</span>
     </button>
     <div class="chat-body" id="chat-body">
+
+      <div class="chat-live-bar">
+        <label class="chat-live-toggle">
+          <input type="checkbox" id="chat-live-enabled" />
+          <span>即時同步到「測試、構思執行者」</span>
+        </label>
+        <button type="button" class="chat-settings-btn" id="chat-settings-btn" title="Webhook 設定">設定</button>
+      </div>
+      <div class="chat-settings" id="chat-settings" hidden>
+        <p class="chat-settings-help">到 Grok Bot 例行「看板即時提問同步」複製 Webhook 網址與 Sender key，貼在下方（只存在本機瀏覽器）。</p>
+        <label class="sr-only" for="chat-webhook-url">Webhook URL</label>
+        <input type="url" id="chat-webhook-url" placeholder="Webhook URL" autocomplete="off" />
+        <label class="sr-only" for="chat-webhook-key">Sender key</label>
+        <input type="password" id="chat-webhook-key" placeholder="Sender key" autocomplete="off" />
+        <button type="button" class="btn-send" id="chat-settings-save">儲存連線</button>
+        <p class="chat-hint" id="chat-settings-status"></p>
+      </div>
       <div class="chat-chips" id="chat-chips"></div>
       <div class="chat-messages" id="chat-messages" role="log" aria-live="polite"></div>
       <form class="chat-form" id="chat-form">
@@ -92,7 +109,7 @@
         <input type="text" id="chat-input" autocomplete="off" placeholder="輸入問題…（僅依看板資料回覆）" />
         <button type="submit" class="btn-send">送出</button>
       </form>
-      <p class="chat-hint">僅依本看板 JSON 回覆，無外部 AI／API。</p>
+      <p class="chat-hint" id="chat-mode-hint">預設依看板資料回覆；開啟即時同步後會送到 Grok Bot。</p>
     </div>
   </aside>
 
