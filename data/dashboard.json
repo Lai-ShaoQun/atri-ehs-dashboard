@@ -10,15 +10,39 @@
     "sourceNote": "依據 115 年度名單與權限表；已知窗口待持續核對"
   },
   "sites": [
-    { "id": "zhengyu", "name": "正育牧場" },
-    { "id": "zhunan", "name": "竹南院區" },
-    { "id": "xiangshan-hq", "name": "香山院本部" },
-    { "id": "xiangshan-spf", "name": "香山SPF" }
+    {
+      "id": "zhengyu",
+      "name": "正育牧場"
+    },
+    {
+      "id": "zhunan",
+      "name": "竹南院區"
+    },
+    {
+      "id": "xiangshan-hq",
+      "name": "香山院本部"
+    },
+    {
+      "id": "xiangshan-spf",
+      "name": "香山SPF"
+    }
   ],
   "legend": [
-    { "key": "valid", "label": "有效", "symbol": "有效" },
-    { "key": "na", "label": "資料待補（NA）", "symbol": "NA" },
-    { "key": "notApplicable", "label": "不適用", "symbol": "—" }
+    {
+      "key": "valid",
+      "label": "有效",
+      "symbol": "有效"
+    },
+    {
+      "key": "na",
+      "label": "資料待補（NA）",
+      "symbol": "NA"
+    },
+    {
+      "key": "notApplicable",
+      "label": "不適用",
+      "symbol": "—"
+    }
   ],
   "leadership": [
     {
@@ -143,12 +167,30 @@
     "香山SPF：以污水為主；日後納管；污水窗口待補。"
   ],
   "certificateCategories": [
-    { "id": "water", "label": "水污" },
-    { "id": "waste", "label": "廢棄物" },
-    { "id": "toxic", "label": "毒化物" },
-    { "id": "fire", "label": "消防" },
-    { "id": "radiation", "label": "輻射" },
-    { "id": "controlled", "label": "管制藥品" }
+    {
+      "id": "water",
+      "label": "水污"
+    },
+    {
+      "id": "waste",
+      "label": "廢棄物"
+    },
+    {
+      "id": "toxic",
+      "label": "毒化物"
+    },
+    {
+      "id": "fire",
+      "label": "消防"
+    },
+    {
+      "id": "radiation",
+      "label": "輻射"
+    },
+    {
+      "id": "controlled",
+      "label": "管制藥品"
+    }
   ],
   "certificates": [
     {
@@ -221,12 +263,60 @@
       "site": "竹南院區",
       "siteId": "zhunan",
       "items": {
-        "water": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "waste": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "toxic": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "fire": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "radiation": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "controlled": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" }
+        "water": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "waste": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "toxic": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "fire": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "radiation": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "controlled": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        }
       },
       "footnotes": []
     },
@@ -234,11 +324,51 @@
       "site": "香山院本部",
       "siteId": "xiangshan-hq",
       "items": {
-        "water": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
-        "waste": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
-        "toxic": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
-        "fire": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "radiation": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "water": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "waste": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "toxic": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "fire": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "radiation": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
         "controlled": {
           "applicability": "apply",
           "status": "valid",
@@ -257,12 +387,60 @@
       "site": "香山SPF",
       "siteId": "xiangshan-spf",
       "items": {
-        "water": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補；日後納管" },
-        "waste": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "toxic": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
-        "fire": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
-        "radiation": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
-        "controlled": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" }
+        "water": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補；日後納管"
+        },
+        "waste": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "toxic": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補"
+        },
+        "fire": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "radiation": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "controlled": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        }
       },
       "footnotes": []
     }
@@ -416,15 +594,5 @@
       "dateGregorian": "2023-06-14",
       "note": ""
     }
-  ],
-  "chat": {
-    "title": "提問「測試、構思執行者」",
-    "placeholder": "輸入問題…（僅依看板資料回覆）",
-    "unknownReply": "看板無此資料，請至 Grok Bot 找「測試、構思執行者」確認。",
-    "suggestedChips": [
-      "正育水污效期？",
-      "竹南誰負責消防？",
-      "下次廢污水申報窗口？"
-    ]
-  }
+  ]
 }
