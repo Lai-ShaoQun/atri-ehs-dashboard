@@ -244,7 +244,7 @@
           "end": "",
           "manager": "陳敬宜",
           "address": "新竹市香山區海山里大湖路51巷1號",
-          "note": "有效（原核發103、本件113）"
+          "note": "竹南／香山院本部共用；有效（原核發103、本件113）"
         }
       },
       "footnotes": []
@@ -299,13 +299,15 @@
           "note": ""
         },
         "controlled": {
-          "applicability": "notApplicable",
-          "status": "notApplicable",
-          "name": "",
-          "id": "",
-          "start": "",
+          "applicability": "apply",
+          "status": "valid",
+          "name": "管制藥品登記證",
+          "id": "管證字第ERR11300000101號",
+          "start": "113",
           "end": "",
-          "note": ""
+          "manager": "陳敬宜",
+          "address": "新竹市香山區海山里大湖路51巷1號",
+          "note": "竹南／香山院本部共用；有效（原核發103、本件113）"
         }
       },
       "footnotes": []
