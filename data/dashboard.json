@@ -11,16 +11,16 @@
   },
   "sites": [
     {
-      "id": "zhengyu",
-      "name": "正育牧場"
-    },
-    {
       "id": "zhunan",
       "name": "竹南院區"
     },
     {
       "id": "xiangshan-hq",
       "name": "香山院本部"
+    },
+    {
+      "id": "zhengyu",
+      "name": "正育牧場"
     },
     {
       "id": "xiangshan-spf",
@@ -64,13 +64,6 @@
     {
       "site": "跨場域",
       "role": "環安衛數位化推動",
-      "name": "賴紹群",
-      "title": "副技術師",
-      "status": "filled"
-    },
-    {
-      "site": "正育牧場",
-      "role": "環保業務主責窗口",
       "name": "賴紹群",
       "title": "副技術師",
       "status": "filled"
@@ -146,6 +139,13 @@
       "status": "filled"
     },
     {
+      "site": "正育牧場",
+      "role": "環保業務聯繫窗口",
+      "name": "賴紹群",
+      "title": "副技術師",
+      "status": "filled"
+    },
+    {
       "site": "香山SPF",
       "role": "污水業務",
       "name": "待補",
@@ -186,72 +186,6 @@
     }
   ],
   "certificates": [
-    {
-      "site": "正育牧場",
-      "siteId": "zhengyu",
-      "items": {
-        "water": {
-          "applicability": "apply",
-          "status": "valid",
-          "name": "水措簡易許可",
-          "id": "苗縣環排許字第00166-10號",
-          "start": "113/3/18",
-          "end": "117/11/28",
-          "endGregorian": "2028-11-28",
-          "note": "僅封面；缺登記事項內頁"
-        },
-        "waste": {
-          "applicability": "apply",
-          "status": "valid",
-          "name": "廢清同意函",
-          "id": "府環廢字第1130006186號",
-          "start": "113/1/26",
-          "end": "118/1/26",
-          "endGregorian": "2029-01-26",
-          "note": ""
-        },
-        "toxic": {
-          "applicability": "apply",
-          "status": "na",
-          "name": "",
-          "id": "",
-          "start": "",
-          "end": "",
-          "note": "資料待補（NA）"
-        },
-        "fire": {
-          "applicability": "notApplicable",
-          "status": "notApplicable",
-          "name": "",
-          "id": "",
-          "start": "",
-          "end": "",
-          "note": ""
-        },
-        "radiation": {
-          "applicability": "notApplicable",
-          "status": "notApplicable",
-          "name": "",
-          "id": "",
-          "start": "",
-          "end": "",
-          "note": ""
-        },
-        "controlled": {
-          "applicability": "notApplicable",
-          "status": "notApplicable",
-          "name": "",
-          "id": "",
-          "start": "",
-          "end": "",
-          "note": ""
-        }
-      },
-      "footnotes": [
-        "沼液沼渣通過函：111/12/1–116/11/30（2022-12-01～2027-11-30）",
-        "畜牧場登記證：農畜牧登字第205954號"
-      ]
-    },
     {
       "site": "竹南院區",
       "siteId": "zhunan",
@@ -375,6 +309,72 @@
         }
       },
       "footnotes": []
+    },
+    {
+      "site": "正育牧場",
+      "siteId": "zhengyu",
+      "items": {
+        "water": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "水措簡易許可",
+          "id": "苗縣環排許字第00166-10號",
+          "start": "113/3/18",
+          "end": "117/11/28",
+          "endGregorian": "2028-11-28",
+          "note": "僅封面；缺登記事項內頁"
+        },
+        "waste": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "廢清同意函",
+          "id": "府環廢字第1130006186號",
+          "start": "113/1/26",
+          "end": "118/1/26",
+          "endGregorian": "2029-01-26",
+          "note": ""
+        },
+        "toxic": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補（NA）"
+        },
+        "fire": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "radiation": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "controlled": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        }
+      },
+      "footnotes": [
+        "沼液沼渣通過函：111/12/1–116/11/30（2022-12-01～2027-11-30）",
+        "畜牧場登記證：農畜牧登字第205954號"
+      ]
     },
     {
       "site": "香山SPF",
