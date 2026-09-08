@@ -2,6 +2,56 @@
   "use strict";
 
   const STORAGE_KEY = "ehs-dashboard-chat-v1";
+
+  const GATE_HASH = "4e36e66055c67d34bcb90241a74f64e6233760bfc7cfc5ec4df5eeea6eb35728";
+  const GATE_SESSION_KEY = "ehs-dashboard-gate-v1";
+
+  async function sha256Hex(text) {
+    const buf = await crypto.subtle.digest(
+      "SHA-256",
+      new TextEncoder().encode(text)
+    );
+    return [...new Uint8Array(buf)]
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  function unlockGate() {
+    document.body.classList.remove("locked");
+    const overlay = $("#gate-overlay");
+    if (overlay) overlay.remove();
+  }
+
+  async function setupGate() {
+    if (sessionStorage.getItem(GATE_SESSION_KEY) === GATE_HASH) {
+      unlockGate();
+      return true;
+    }
+    const form = $("#gate-form");
+    const input = $("#gate-password");
+    const err = $("#gate-error");
+    if (!form || !input) {
+      unlockGate();
+      return true;
+    }
+    return new Promise((resolve) => {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const hash = await sha256Hex(input.value);
+        if (hash === GATE_HASH) {
+          sessionStorage.setItem(GATE_SESSION_KEY, GATE_HASH);
+          if (err) err.hidden = true;
+          unlockGate();
+          resolve(true);
+        } else {
+          if (err) err.hidden = false;
+          input.value = "";
+          input.focus();
+        }
+      });
+    });
+  }
+
   let data = null;
 
   const $ = (sel, root = document) => root.querySelector(sel);
@@ -422,6 +472,7 @@
 
   async function init() {
     try {
+      await setupGate();
       data = await loadData();
       renderHeader();
       renderPersonnel();

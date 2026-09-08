@@ -749,3 +749,109 @@ body {
     place-items: center;
   }
 }
+
+
+/* —— 進站密碼門 —— */
+body.locked .app-shell,
+body.locked .chat-panel,
+body.locked .chat-fab {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.25rem;
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(15, 118, 110, 0.35), transparent 55%),
+    linear-gradient(160deg, #0f766e 0%, #134e4a 45%, #0f172a 100%);
+}
+
+body:not(.locked) .gate-overlay {
+  display: none;
+}
+
+.gate-card {
+  width: min(100%, 380px);
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.75rem 1.5rem 1.35rem;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.28);
+  display: grid;
+  gap: 0.65rem;
+}
+
+.gate-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.25rem;
+  background: #0f766e;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.gate-card h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.15rem;
+  color: #0f172a;
+}
+
+.gate-sub {
+  margin: 0 0 0.35rem;
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+#gate-password {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+}
+
+#gate-password:focus {
+  outline: 2px solid #0f766e;
+  outline-offset: 1px;
+}
+
+.gate-error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.gate-submit {
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: #0f766e;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.gate-submit:hover {
+  background: #115e59;
+}
+
+.gate-note {
+  margin: 0.25rem 0 0;
+  text-align: center;
+  font-size: 0.72rem;
+  color: #94a3b8;
+  line-height: 1.4;
+}

@@ -6,7 +6,21 @@
   <title>農科院環安小組看板｜測試原型</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="locked">
+
+  <div id="gate-overlay" class="gate-overlay" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <form class="gate-card" id="gate-form" autocomplete="off">
+      <div class="gate-mark" aria-hidden="true">環</div>
+      <h2 id="gate-title">農科院環安小組看板</h2>
+      <p class="gate-sub">請輸入密碼後繼續（測試原型）</p>
+      <label class="sr-only" for="gate-password">密碼</label>
+      <input type="password" id="gate-password" name="password" required placeholder="請輸入密碼" autofocus />
+      <p class="gate-error" id="gate-error" hidden>密碼不正確，請再試一次。</p>
+      <button type="submit" class="gate-submit">進入看板</button>
+      <p class="gate-note">前端門禁僅防誤開；正式機敏資料請用受控環境。</p>
+    </form>
+  </div>
+
   <div class="app-shell">
     <header class="site-header">
       <div class="header-brand">
