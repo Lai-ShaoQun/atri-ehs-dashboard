@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>農科院環安小組看板｜測試原型</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="site-header">
+      <div class="header-brand">
+        <div class="brand-mark" aria-hidden="true">環</div>
+        <div class="brand-text">
+          <h1>農科院環安小組看板</h1>
+          <p class="header-meta">
+            <span class="badge badge-proto">測試原型</span>
+            <span id="header-updated">更新 2026-09-08（臺北）</span>
+          </p>
+        </div>
+      </div>
+      <p class="header-org" id="header-org">財團法人農業科技研究院 · 環安小組</p>
+    </header>
+
+    <main class="main-content">
+      <section class="panel" id="section-personnel" aria-labelledby="heading-personnel">
+        <div class="panel-head">
+          <h2 id="heading-personnel">人員編制與職稱</h2>
+          <p class="panel-note" id="personnel-source"></p>
+        </div>
+        <div class="personnel-grid" id="personnel-grid"></div>
+        <ul class="notes-list" id="personnel-notes"></ul>
+      </section>
+
+      <section class="panel" id="section-certs" aria-labelledby="heading-certs">
+        <div class="panel-head">
+          <h2 id="heading-certs">各場域證書與效期</h2>
+          <div class="legend" id="cert-legend" role="list"></div>
+        </div>
+        <div class="table-scroll">
+          <table class="cert-matrix" id="cert-matrix">
+            <thead></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="cert-details" id="cert-details"></div>
+      </section>
+
+      <section class="panel" id="section-todos" aria-labelledby="heading-todos">
+        <div class="panel-head">
+          <h2 id="heading-todos">近期待辦與限期</h2>
+        </div>
+        <div class="standing-rules" id="standing-rules"></div>
+        <div class="todo-list" id="todo-list"></div>
+      </section>
+
+      <section class="panel" id="section-regs" aria-labelledby="heading-regs">
+        <div class="panel-head">
+          <h2 id="heading-regs">近期重點異動法規</h2>
+        </div>
+        <div class="reg-list" id="reg-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="site-footer"></footer>
+  </div>
+
+  <aside class="chat-panel" id="chat-panel" aria-label="提問測試、構思執行者">
+    <button type="button" class="chat-toggle" id="chat-toggle" aria-expanded="true" aria-controls="chat-body">
+      <span class="chat-toggle-label" id="chat-title">提問「測試、構思執行者」</span>
+      <span class="chat-toggle-icon" aria-hidden="true">▾</span>
+    </button>
+    <div class="chat-body" id="chat-body">
+      <div class="chat-chips" id="chat-chips"></div>
+      <div class="chat-messages" id="chat-messages" role="log" aria-live="polite"></div>
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">問題</label>
+        <input type="text" id="chat-input" autocomplete="off" placeholder="輸入問題…（僅依看板資料回覆）" />
+        <button type="submit" class="btn-send">送出</button>
+      </form>
+      <p class="chat-hint">僅依本看板 JSON 回覆，無外部 AI／API。</p>
+    </div>
+  </aside>
+
+  <button type="button" class="chat-fab" id="chat-fab" aria-label="開啟提問面板" hidden>問</button>
+
+  <script src="app.js"></script>
+</body>
+</html>

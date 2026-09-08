@@ -1,0 +1,430 @@
+{
+  "meta": {
+    "title": "農科院環安小組看板",
+    "subtitle": "測試原型",
+    "updated": "2026-09-08",
+    "updatedLabel": "更新 2026-09-08（臺北）",
+    "org": "財團法人農業科技研究院",
+    "team": "環安小組",
+    "footer": "測試用途；正式對外／正式歸檔仍走原窗口＋審稿門檻。",
+    "sourceNote": "依據 115 年度名單與權限表；已知窗口待持續核對"
+  },
+  "sites": [
+    { "id": "zhengyu", "name": "正育牧場" },
+    { "id": "zhunan", "name": "竹南院區" },
+    { "id": "xiangshan-hq", "name": "香山院本部" },
+    { "id": "xiangshan-spf", "name": "香山SPF" }
+  ],
+  "legend": [
+    { "key": "valid", "label": "有效", "symbol": "有效" },
+    { "key": "na", "label": "資料待補（NA）", "symbol": "NA" },
+    { "key": "notApplicable", "label": "不適用", "symbol": "—" }
+  ],
+  "leadership": [
+    {
+      "site": "跨場域",
+      "role": "召集人",
+      "name": "陳正文",
+      "title": "副院長",
+      "status": "filled"
+    },
+    {
+      "site": "跨場域",
+      "role": "執行秘書",
+      "name": "翁俊棋",
+      "title": "副管理師",
+      "status": "filled"
+    }
+  ],
+  "personnel": [
+    {
+      "site": "跨場域",
+      "role": "環安衛數位化推動",
+      "name": "賴紹群",
+      "title": "副技術師",
+      "status": "filled"
+    },
+    {
+      "site": "正育牧場",
+      "role": "環保業務主責窗口",
+      "name": "賴紹群",
+      "title": "副技術師",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "廢水",
+      "name": "朱立文",
+      "title": "計畫聘僱助理",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "廢棄物",
+      "name": "翁俊棋",
+      "title": "副管理師",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "毒化物",
+      "name": "鍾鎰安",
+      "title": "計畫聘僱助理",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "職安",
+      "name": "鍾鎰安",
+      "title": "計畫聘僱助理",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "消防",
+      "name": "林學延",
+      "title": "助理管理師",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "管制藥品",
+      "name": "陳敬宜",
+      "title": "組長",
+      "status": "filled"
+    },
+    {
+      "site": "竹南院區",
+      "role": "輻射",
+      "name": "宗麟",
+      "title": "副研究員",
+      "status": "filled"
+    },
+    {
+      "site": "香山院本部",
+      "role": "職安",
+      "name": "翁俊棋",
+      "title": "副管理師",
+      "status": "filled"
+    },
+    {
+      "site": "香山院本部",
+      "role": "消防／防火管理",
+      "name": "賴景利",
+      "title": "組長／綜合行政課課長",
+      "status": "filled"
+    },
+    {
+      "site": "跨場域",
+      "role": "民防團權限",
+      "name": "賴景利／翁俊棋／鍾鎰安",
+      "title": "",
+      "status": "filled"
+    },
+    {
+      "site": "跨場域",
+      "role": "環境教育",
+      "name": "翁俊棋／鍾鎰安／朱立文",
+      "title": "",
+      "status": "filled"
+    },
+    {
+      "site": "香山SPF",
+      "role": "污水業務",
+      "name": "待補",
+      "title": "",
+      "status": "vacant"
+    }
+  ],
+  "personnelNotes": [
+    "竹南院區：位於竹南科學園區內；污水專責、廢棄物幹事、毒化物幹事、管制藥品幹事、輻射幹事、防火管理人、民防團及自衛編組；有職安。",
+    "香山院本部：防火管理、民防團及自衛編組；有職安。消防窗口為賴景利。",
+    "正育牧場：廢棄物與污水業務／資料；環保主責與數位化由賴紹群兼任。",
+    "香山SPF：以污水為主；日後納管；污水窗口待補。"
+  ],
+  "certificateCategories": [
+    { "id": "water", "label": "水污" },
+    { "id": "waste", "label": "廢棄物" },
+    { "id": "toxic", "label": "毒化物" },
+    { "id": "fire", "label": "消防" },
+    { "id": "radiation", "label": "輻射" },
+    { "id": "controlled", "label": "管制藥品" }
+  ],
+  "certificates": [
+    {
+      "site": "正育牧場",
+      "siteId": "zhengyu",
+      "items": {
+        "water": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "水措簡易許可",
+          "id": "苗縣環排許字第00166-10號",
+          "start": "113/3/18",
+          "end": "117/11/28",
+          "endGregorian": "2028-11-28",
+          "note": "僅封面；缺登記事項內頁"
+        },
+        "waste": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "廢清同意函",
+          "id": "府環廢字第1130006186號",
+          "start": "113/1/26",
+          "end": "118/1/26",
+          "endGregorian": "2029-01-26",
+          "note": ""
+        },
+        "toxic": {
+          "applicability": "apply",
+          "status": "na",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": "資料待補（NA）"
+        },
+        "fire": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "radiation": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "controlled": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        }
+      },
+      "footnotes": [
+        "沼液沼渣通過函：111/12/1–116/11/30（2022-12-01～2027-11-30）",
+        "畜牧場登記證：農畜牧登字第205954號"
+      ]
+    },
+    {
+      "site": "竹南院區",
+      "siteId": "zhunan",
+      "items": {
+        "water": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "waste": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "toxic": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "fire": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "radiation": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "controlled": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" }
+      },
+      "footnotes": []
+    },
+    {
+      "site": "香山院本部",
+      "siteId": "xiangshan-hq",
+      "items": {
+        "water": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
+        "waste": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
+        "toxic": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
+        "fire": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "radiation": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "controlled": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "管制藥品登記證",
+          "id": "管證字第ERR11300000101號",
+          "start": "113",
+          "end": "",
+          "manager": "陳敬宜",
+          "address": "新竹市香山區海山里大湖路51巷1號",
+          "note": "有效（原核發103、本件113）"
+        }
+      },
+      "footnotes": []
+    },
+    {
+      "site": "香山SPF",
+      "siteId": "xiangshan-spf",
+      "items": {
+        "water": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補；日後納管" },
+        "waste": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "toxic": { "applicability": "apply", "status": "na", "name": "", "id": "", "start": "", "end": "", "note": "資料待補" },
+        "fire": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
+        "radiation": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" },
+        "controlled": { "applicability": "notApplicable", "status": "notApplicable", "name": "", "id": "", "start": "", "end": "", "note": "" }
+      },
+      "footnotes": []
+    }
+  ],
+  "todoStandingRules": [
+    {
+      "id": "wastewater-semi-annual",
+      "title": "廢污水定期檢測與半年申報",
+      "detail": "每年1/1起報上年7–12月、7/1起報當年1–6月；起算後15天內（約至1/15、7/15）。",
+      "sites": "適用場（正育牧場、竹南院區等）",
+      "priority": "high",
+      "type": "standing"
+    }
+  ],
+  "todos": [
+    {
+      "id": "todo-zhengyu-ww-2027-01",
+      "title": "【正育牧場】廢污水半年申報起算（1/1）",
+      "detail": "申報期間：上年7–12月；起算日後約至1/15完成。",
+      "due": "2027-01-01",
+      "dueRoc": "民國116年1月1日",
+      "window": "約至 2027-01-15（1/15）",
+      "owner": "賴紹群",
+      "site": "正育牧場",
+      "priority": "high",
+      "type": "calendar"
+    },
+    {
+      "id": "todo-zhunan-ww-2027-01",
+      "title": "【竹南院區】廢污水半年申報起算（1/1）",
+      "detail": "申報期間：上年7–12月；起算日後約至1/15完成。",
+      "due": "2027-01-01",
+      "dueRoc": "民國116年1月1日",
+      "window": "約至 2027-01-15（1/15）",
+      "owner": "朱立文",
+      "site": "竹南院區",
+      "priority": "high",
+      "type": "calendar"
+    },
+    {
+      "id": "todo-zhengyu-flowmeter-2027-04",
+      "title": "【正育牧場】超音波流量計外校提醒（提前30天）",
+      "detail": "超音波流量計外部校正提前提醒。",
+      "due": "2027-04-29",
+      "dueRoc": "民國116年4月29日",
+      "window": "",
+      "owner": "賴紹群",
+      "site": "正育牧場",
+      "priority": "medium",
+      "type": "calendar"
+    },
+    {
+      "id": "todo-zhengyu-biogas-2027-05",
+      "title": "【正育牧場】沼液沼渣農地肥分使用計畫可申請展延",
+      "detail": "可申請展延窗口約 116/5/30–116/8/29。",
+      "due": "2027-05-30",
+      "dueRoc": "民國116年5月30日",
+      "window": "約 116/5/30–116/8/29（2027-05-30～2027-08-29）",
+      "owner": "賴紹群",
+      "site": "正育牧場",
+      "priority": "medium",
+      "type": "calendar"
+    },
+    {
+      "id": "todo-zhengyu-ww-2027-07",
+      "title": "【正育牧場】廢污水半年申報起算（7/1）",
+      "detail": "申報期間：當年1–6月；起算日後約至7/15完成。",
+      "due": "2027-07-01",
+      "dueRoc": "民國116年7月1日",
+      "window": "約至 2027-07-15（7/15）",
+      "owner": "賴紹群",
+      "site": "正育牧場",
+      "priority": "high",
+      "type": "calendar"
+    },
+    {
+      "id": "todo-zhunan-ww-2027-07",
+      "title": "【竹南院區】廢污水半年申報起算（7/1）",
+      "detail": "申報期間：當年1–6月；起算日後約至7/15完成。",
+      "due": "2027-07-01",
+      "dueRoc": "民國116年7月1日",
+      "window": "約至 2027-07-15（7/15）",
+      "owner": "朱立文",
+      "site": "竹南院區",
+      "priority": "high",
+      "type": "calendar"
+    }
+  ],
+  "todoEmptyNote": "日曆近期尚無額外排程（或待同步）",
+  "regulations": [
+    {
+      "code": "N0060009",
+      "title": "職業安全衛生設施規則",
+      "action": "修正",
+      "date": "115/06/30",
+      "dateSort": "1150630",
+      "dateGregorian": "2026-06-30",
+      "note": "部分條文116/1/1施行"
+    },
+    {
+      "code": "",
+      "title": "管制藥品分級及品項",
+      "action": "修正",
+      "date": "115/06/24",
+      "dateSort": "1150624",
+      "dateGregorian": "2026-06-24",
+      "note": "院臺衛字第1151058804號；1150626生效"
+    },
+    {
+      "code": "GL006016",
+      "title": "列管毒性化學物質及其運作管理事項",
+      "action": "修正",
+      "date": "115/04/27",
+      "dateSort": "1150427",
+      "dateGregorian": "2026-04-27",
+      "note": "1150701生效"
+    },
+    {
+      "code": "O0110006",
+      "title": "地下水污染管制標準",
+      "action": "修正",
+      "date": "114/12/23",
+      "dateSort": "1141223",
+      "dateGregorian": "2025-12-23",
+      "note": ""
+    },
+    {
+      "code": "O0040004",
+      "title": "放流水標準",
+      "action": "修正",
+      "date": "113/12/18",
+      "dateSort": "1131218",
+      "dateGregorian": "2024-12-18",
+      "note": ""
+    },
+    {
+      "code": "D0120029",
+      "title": "各類場所消防安全設備設置標準",
+      "action": "修正",
+      "date": "113/04/24",
+      "dateSort": "1130424",
+      "dateGregorian": "2024-04-24",
+      "note": ""
+    },
+    {
+      "code": "O0020006",
+      "title": "固定污染源空氣污染物排放標準",
+      "action": "修正",
+      "date": "112/06/14",
+      "dateSort": "1120614",
+      "dateGregorian": "2023-06-14",
+      "note": ""
+    }
+  ],
+  "chat": {
+    "title": "提問「測試、構思執行者」",
+    "placeholder": "輸入問題…（僅依看板資料回覆）",
+    "unknownReply": "看板無此資料，請至 Grok Bot 找「測試、構思執行者」確認。",
+    "suggestedChips": [
+      "正育水污效期？",
+      "竹南誰負責消防？",
+      "下次廢污水申報窗口？"
+    ]
+  }
+}
