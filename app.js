@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const STORAGE_KEY = "ehs-dashboard-chat-v1";
 
   const GATE_HASH = "4e36e66055c67d34bcb90241a74f64e6233760bfc7cfc5ec4df5eeea6eb35728";
   const GATE_SESSION_KEY = "ehs-dashboard-gate-v1";
