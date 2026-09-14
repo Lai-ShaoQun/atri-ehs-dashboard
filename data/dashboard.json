@@ -341,12 +341,12 @@
         "water": {
           "applicability": "apply",
           "status": "valid",
-          "name": "水措簡易許可",
+          "name": "水措許可",
           "id": "苗縣環排許字第00166-10號",
           "start": "113/3/18",
           "end": "117/11/28",
           "endGregorian": "2028-11-28",
-          "note": "僅封面；缺登記事項內頁"
+          "note": ""
         },
         "waste": {
           "applicability": "apply",
