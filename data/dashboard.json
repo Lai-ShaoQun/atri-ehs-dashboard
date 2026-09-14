@@ -468,13 +468,13 @@
           "note": ""
         },
         "biogas": {
-          "applicability": "notApplicable",
-          "status": "notApplicable",
+          "applicability": "apply",
+          "status": "na",
           "name": "",
           "id": "",
           "start": "",
           "end": "",
-          "note": ""
+          "note": "資料待補"
         }
       },
       "footnotes": []
