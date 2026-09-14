@@ -169,6 +169,10 @@
       "label": "廢棄物"
     },
     {
+      "id": "biogas",
+      "label": "沼液沼渣"
+    },
+    {
       "id": "toxic",
       "label": "毒化物"
     },
@@ -245,6 +249,15 @@
           "manager": "陳敬宜",
           "address": "新竹市香山區海山里大湖路51巷1號",
           "note": "竹南／香山院本部共用；有效（原核發103、本件113）"
+        },
+        "biogas": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
         }
       },
       "footnotes": []
@@ -308,6 +321,15 @@
           "manager": "陳敬宜",
           "address": "新竹市香山區海山里大湖路51巷1號",
           "note": "竹南／香山院本部共用；有效（原核發103、本件113）"
+        },
+        "biogas": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
         }
       },
       "footnotes": []
@@ -371,10 +393,19 @@
           "start": "",
           "end": "",
           "note": ""
+        },
+        "biogas": {
+          "applicability": "apply",
+          "status": "valid",
+          "name": "沼液沼渣通過函",
+          "id": "府農畜字第1110226666號",
+          "start": "111/12/1",
+          "end": "116/11/30",
+          "endGregorian": "2027-11-30",
+          "note": "沼液沼渣農地肥分使用；展延窗約116/5/30～116/8/29"
         }
       },
       "footnotes": [
-        "沼液沼渣通過函：111/12/1–116/11/30（2022-12-01～2027-11-30）",
         "畜牧場登記證：農畜牧登字第205954號"
       ]
     },
@@ -428,6 +459,15 @@
           "note": ""
         },
         "controlled": {
+          "applicability": "notApplicable",
+          "status": "notApplicable",
+          "name": "",
+          "id": "",
+          "start": "",
+          "end": "",
+          "note": ""
+        },
+        "biogas": {
           "applicability": "notApplicable",
           "status": "notApplicable",
           "name": "",
