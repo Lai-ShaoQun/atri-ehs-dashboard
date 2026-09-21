@@ -2,8 +2,8 @@
   "meta": {
     "title": "農科院環安小組看板",
     "subtitle": "測試原型",
-    "updated": "2026-09-14",
-    "updatedLabel": "更新 2026-09-14（臺北）",
+    "updated": "2026-09-21",
+    "updatedLabel": "更新 2026-09-21（臺北）",
     "org": "財團法人農業科技研究院",
     "team": "環安小組",
     "footer": "測試用途；正式對外／正式歸檔仍走原窗口＋審稿門檻。",
@@ -205,12 +205,12 @@
         },
         "waste": {
           "applicability": "apply",
-          "status": "na",
-          "name": "",
-          "id": "",
-          "start": "",
+          "status": "valid",
+          "name": "事業廢棄物清理計畫書（異動）備查",
+          "id": "竹環字第1150022787號",
+          "start": "115/7/14",
           "end": "",
-          "note": "資料待補"
+          "note": "管制編號 K71A5966；園區管理局備查"
         },
         "toxic": {
           "applicability": "apply",
@@ -567,6 +567,15 @@
   "todoEmptyNote": "日曆近期尚無額外排程（或待同步）",
   "regulations": [
     {
+      "code": "O0020105",
+      "title": "溫室氣體管理基金收支保管及運用辦法",
+      "action": "修正",
+      "date": "115/09/14",
+      "dateSort": "1150914",
+      "dateGregorian": "2026-09-14",
+      "note": "院授主基法字第1150201762A號；第4條用途增貸款信用保證及利息補貼"
+    },
+    {
       "code": "",
       "title": "管制藥品分級及品項",
       "action": "修正",
@@ -618,6 +627,15 @@
       "date": "114/12/23",
       "dateSort": "1141223",
       "dateGregorian": "2025-12-23",
+      "note": ""
+    },
+    {
+      "code": "",
+      "title": "溫室氣體排放量盤查登錄及查驗管理辦法",
+      "action": "修正",
+      "date": "114/12/19",
+      "dateSort": "1141219",
+      "dateGregorian": "2025-12-19",
       "note": ""
     },
     {
